@@ -1,3 +1,4 @@
+import { Link } from 'react-router-dom'
 import { usePageMeta } from '../hooks/usePageMeta'
 import { useReveal } from '../hooks/useReveal'
 import { useStaggerReveal } from '../hooks/useStaggerReveal'
@@ -37,6 +38,9 @@ export default function Experience() {
                 <li>Integrating the AI model into a live, usable interface</li>
                 <li>Implementing real-time acoustic analysis feedback</li>
               </ul>
+              <div className="timeline-card-link">
+                <Link to="/projects/aura-dx">Read the case study &rarr;</Link>
+              </div>
             </div>
 
             <div className="timeline-stack">
