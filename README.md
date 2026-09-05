@@ -7,7 +7,7 @@ A personal developer portfolio built with **React**, **Vite**, and **React Route
 - **Home** — Hero section with intro and typing animation
 - **About** — Background, bio, and key strengths
 - **Experience** — Timeline of education and projects
-- **Skills** — Proficiency bars for technical skills
+- **Skills** — Skill chips + soft-skill cards
 - **Projects** — Showcase of built projects
 - **Contact** — Email and social links
 
@@ -49,7 +49,7 @@ npm run preview
 ```
 src/
   components/   — Navbar, MobileMenu, Footer, ProfileImg
-  hooks/        — useTheme, useReveal, useStaggerReveal, useTilt
+  hooks/        — useTheme, useReveal, useStaggerReveal, useTilt, usePageMeta
   pages/        — Home, About, Experience, Skills, Projects, Contact
   styles/       — global.css (all styling + theme variables)
   assets/       — images
