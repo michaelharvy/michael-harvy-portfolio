@@ -53,6 +53,7 @@ src/
   pages/        — Home, About, Experience, Skills, Projects, Contact
   styles/       — global.css (all styling + theme variables)
   assets/       — images
+public/         — resume.html (print-ready CV), og-image.png (social share card)
 ```
 
 Since this is a client-side React Router app, deep links like `/about` work through the SPA fallback in dev; a static host (e.g. GitHub Pages, Netlify) needs an SPA redirect for client-side routing.

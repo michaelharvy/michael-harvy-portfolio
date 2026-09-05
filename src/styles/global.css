@@ -586,9 +586,21 @@ main {
     clip-path: polygon(10px 0, 100% 0, 100% calc(100% - 10px), calc(100% - 10px) 100%, 0 100%, 0 10px);
 }
 
+.hero-btn:active,
 .hero-btn:hover {
     background: var(--accent);
     color: var(--accent-text);
+}
+
+.hero-btn--ghost {
+    border-color: var(--border);
+    color: var(--text-dim);
+}
+
+.hero-btn--ghost:hover {
+    background: transparent;
+    border-color: var(--accent);
+    color: var(--accent);
 }
 
 .hero-actions {
@@ -1673,6 +1685,24 @@ main {
 
 .mailto-btn:hover svg {
     stroke: var(--accent-text);
+}
+
+.mailto-btn--ghost {
+    border-color: var(--border);
+    color: var(--text-dim);
+    display: inline-flex;
+    align-items: center;
+    gap: 0.6rem;
+}
+
+.mailto-btn--ghost:hover {
+    background: transparent;
+    border-color: var(--accent);
+    color: var(--accent);
+}
+
+.mailto-btn--ghost:hover svg {
+    stroke: var(--accent);
 }
 
 .contact-details {
