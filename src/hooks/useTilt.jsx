@@ -6,6 +6,7 @@ export function useTilt({ maxX = 3, maxY = 3, perspective = 800, lift = -6 } = {
   useEffect(() => {
     const el = ref.current
     if (!el) return undefined
+    if (window.matchMedia('(prefers-reduced-motion: reduce)').matches) return undefined
 
     const onMove = (e) => {
       const rect = el.getBoundingClientRect()
