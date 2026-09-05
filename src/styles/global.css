@@ -1568,6 +1568,12 @@ main {
     opacity: 0.7;
 }
 
+.project-links span {
+    font-size: 0.82rem;
+    color: var(--text-dim);
+    font-weight: 600;
+}
+
 /* ========================================
    CONTACT
    ======================================== */
@@ -1740,6 +1746,34 @@ footer span {
         opacity: 0;
         transform: translateY(-8px);
     }
+}
+
+/* route lazy-load fallback */
+.route-loader {
+    min-height: 55vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 0.82rem;
+    font-weight: 600;
+    letter-spacing: 2px;
+    text-transform: uppercase;
+    color: var(--text-dim);
+}
+
+.route-loader::after {
+    content: '';
+    width: 18px;
+    height: 18px;
+    margin-left: 0.7rem;
+    border: 2px solid var(--border);
+    border-top-color: var(--accent);
+    border-radius: 50%;
+    animation: routeSpin 0.7s linear infinite;
+}
+
+@keyframes routeSpin {
+    to { transform: rotate(360deg); }
 }
 
 /* ========================================

@@ -1,4 +1,4 @@
-import { useEffect, useState } from 'react'
+import { useEffect, useRef, useState } from 'react'
 import { NavLink } from 'react-router-dom'
 
 const LINKS = [
@@ -12,11 +12,27 @@ const LINKS = [
 
 export default function Navbar({ menuOpen, onToggleMenu, theme, toggleTheme }) {
   const [scrolled, setScrolled] = useState(false)
+  const hamburgerRef = useRef(null)
+  const menuRef = useRef(null)
 
   useEffect(() => {
     document.body.style.overflow = menuOpen ? 'hidden' : ''
     return () => { document.body.style.overflow = '' }
   }, [menuOpen])
+
+  useEffect(() => {
+    if (!menuOpen) {
+      if (hamburgerRef.current) hamburgerRef.current.focus()
+      return undefined
+    }
+    const onKeyDown = (e) => {
+      if (e.key === 'Escape') onToggleMenu()
+    }
+    window.addEventListener('keydown', onKeyDown)
+    const firstFocusable = menuRef.current?.querySelector('a, button')
+    firstFocusable?.focus()
+    return () => window.removeEventListener('keydown', onKeyDown)
+  }, [menuOpen, onToggleMenu])
 
   useEffect(() => {
     let ticking = false
@@ -51,8 +67,10 @@ export default function Navbar({ menuOpen, onToggleMenu, theme, toggleTheme }) {
         <button
           className={`hamburger${menuOpen ? ' open' : ''}`}
           id="hamburger"
+          ref={hamburgerRef}
           aria-label="menu"
           aria-expanded={menuOpen}
+          aria-haspopup="true"
           onClick={onToggleMenu}
         >
           <span></span>
@@ -89,7 +107,14 @@ export default function Navbar({ menuOpen, onToggleMenu, theme, toggleTheme }) {
         </span>
       </button>
 
-      <aside className={`mobile-menu${menuOpen ? ' open' : ''}`} id="mobileMenu">
+      <aside
+        className={`mobile-menu${menuOpen ? ' open' : ''}`}
+        id="mobileMenu"
+        ref={menuRef}
+        onClick={(e) => {
+          if (e.target === e.currentTarget) onToggleMenu()
+        }}
+      >
         {LINKS.map((link) => (
           <NavLink
             key={link.to}

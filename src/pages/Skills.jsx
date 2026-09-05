@@ -1,7 +1,12 @@
+import { usePageMeta } from '../hooks/usePageMeta'
 import { useReveal } from '../hooks/useReveal'
 
 export default function Skills() {
   const revealRef = useReveal({ threshold: 0.15 })
+  usePageMeta(
+    'Skills — Michael Harvy M. Nepomuceno',
+    'Technical skills and work ethic of Michael Harvy M. Nepomuceno — frontend, backend, tools, and Computer Engineering fundamentals.',
+  )
 
   const chip = (icon, label) => (
     <div className="skill-chip">
@@ -28,6 +33,8 @@ export default function Skills() {
               {chip(<><polyline points="16 18 22 12 16 6" /><polyline points="8 6 2 12 8 18" /></>, 'HTML5')}
               {chip(<><path d="M12 2 2 7l10 5 10-5-10-5z" /><path d="m2 17 10 5 10-5" /><path d="m2 12 10 5 10-5" /></>, 'CSS3')}
               {chip(<><path d="M12 2c-2.4 0-4.8 1-6.5 2.8C3.8 6.6 3 9.2 3 12c0 4.4 3.6 8 8 8 1.5 0 2.9-.4 4.1-1.1" /><polyline points="14 16 16 14 14 12" /><polyline points="10 8 8 10 10 12" /><path d="m16 4-4 16" /></>, 'JavaScript')}
+              {chip(<><circle cx="12" cy="12" r="1" /><path d="M20.2 20.2c2.04-2.03.02-7.36-4.5-11.9-4.54-4.52-9.87-6.54-11.9-4.5-2.04 2.03-.02 7.36 4.5 11.9 4.54 4.52 9.87 6.54 11.9 4.5Z" /><path d="M15.7 15.7c4.52-4.54 6.54-9.87 4.5-11.9-2.03-2.04-7.36-.02-11.9 4.5-4.52 4.54-6.54 9.87-4.5 11.9 2.03 2.04 7.36.02 11.9-4.5Z" /></>, 'React.js')}
+              {chip(<><polygon points="13 2 3 14 12 14 11 22 21 10 12 10 13 2" /></>, 'Vite')}
             </div>
           </div>
 

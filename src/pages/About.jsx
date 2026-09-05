@@ -1,11 +1,16 @@
 import { Link } from 'react-router-dom'
 import ProfileImg from '../components/ProfileImg'
+import { usePageMeta } from '../hooks/usePageMeta'
 import { useReveal } from '../hooks/useReveal'
 import { useTilt } from '../hooks/useTilt'
 
 export default function About() {
   const revealRef = useReveal({ threshold: 0.1 })
   const tiltRef = useTilt({ maxX: 2, maxY: 2, perspective: 600, lift: 0 })
+  usePageMeta(
+    'About — Michael Harvy M. Nepomuceno',
+    'A bit about Michael Harvy M. Nepomuceno — a driven Computer Engineering student passionate about sleek interfaces, real software, and AI-powered apps.',
+  )
 
   return (
     <section className="section" ref={revealRef}>

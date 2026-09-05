@@ -1,7 +1,12 @@
+import { usePageMeta } from '../hooks/usePageMeta'
 import { useReveal } from '../hooks/useReveal'
 
 export default function Contact() {
   const revealRef = useReveal({ threshold: 0.1 })
+  usePageMeta(
+    'Contact — Michael Harvy M. Nepomuceno',
+    'Get in touch with Michael Harvy M. Nepomuceno — open to questions, project ideas, and collaborations.',
+  )
 
   return (
     <section className="section" ref={revealRef}>

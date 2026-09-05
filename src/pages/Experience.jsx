@@ -1,9 +1,14 @@
+import { usePageMeta } from '../hooks/usePageMeta'
 import { useReveal } from '../hooks/useReveal'
 import { useStaggerReveal } from '../hooks/useStaggerReveal'
 
 export default function Experience() {
   const revealRef = useReveal({ threshold: 0.1 })
   const timelineRef = useStaggerReveal()
+  usePageMeta(
+    'Experience — Michael Harvy M. Nepomuceno',
+    'Education and project timeline of Michael Harvy M. Nepomuceno — from C++ foundations to AI-powered systems at URS Morong.',
+  )
 
   return (
     <section className="section" ref={revealRef}>

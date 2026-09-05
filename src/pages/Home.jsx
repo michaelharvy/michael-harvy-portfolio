@@ -1,6 +1,7 @@
 import { useEffect, useRef, useState } from 'react'
 import { Link } from 'react-router-dom'
 import ProfileImg from '../components/ProfileImg'
+import { usePageMeta } from '../hooks/usePageMeta'
 import { useReveal } from '../hooks/useReveal'
 
 const PHRASES = ['web developer', 'problem solver', 'CPE student', 'lifelong learner']
@@ -40,6 +41,10 @@ function useTypewriter(phrases) {
 export default function Home() {
   const revealRef = useReveal({ threshold: 0.1 })
   const typed = useTypewriter(PHRASES)
+  usePageMeta(
+    'Michael Harvy M. Nepomuceno — Web Developer Portfolio',
+    'Portfolio of Michael Harvy M. Nepomuceno — a 4th year Computer Programming Engineering student who builds things for the web.',
+  )
 
   return (
     <section className="hero" ref={revealRef}>
