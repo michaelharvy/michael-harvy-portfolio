@@ -1,0 +1,203 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Michael Harvy M. Nepomuceno — CV</title>
+    <meta name="description" content="Curriculum Vitae of Michael Harvy M. Nepomuceno — Computer Programming Engineering student at University of Rizal System Morong." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@400;500;600;700&display=swap" rel="stylesheet" />
+    <style>
+      * { margin: 0; padding: 0; box-sizing: border-box; }
+      :root {
+        --accent: #e8a838;
+        --dark: #0f0f0f;
+        --ink: #1a1a1a;
+        --dim: #555;
+        --line: #e3e3e3;
+      }
+      body {
+        font-family: 'Space Grotesk', sans-serif;
+        color: var(--ink);
+        background: #f3f3f3;
+        line-height: 1.55;
+        font-size: 13px;
+      }
+      .page {
+        max-width: 820px;
+        margin: 24px auto;
+        background: #fff;
+        padding: 48px 52px;
+        box-shadow: 0 10px 30px rgba(0,0,0,0.08);
+      }
+      header { display: flex; justify-content: space-between; align-items: flex-start; gap: 20px; border-bottom: 3px solid var(--dark); padding-bottom: 18px; }
+      h1 { font-size: 28px; letter-spacing: -0.5px; line-height: 1.15; }
+      h1 span { color: var(--accent); }
+      .role { color: var(--dim); font-size: 12px; letter-spacing: 1px; text-transform: uppercase; margin-top: 2px; font-weight: 500; }
+      .contact { text-align: right; font-size: 12px; color: var(--dim); }
+      .contact a { color: var(--dim); text-decoration: none; }
+      .contact a:hover { color: var(--accent); }
+      .contact div { margin-top: 2px; }
+      section { margin-top: 22px; }
+      h2 { font-size: 13px; text-transform: uppercase; letter-spacing: 2px; color: var(--accent); font-weight: 700; display: flex; align-items: center; gap: 10px; margin-bottom: 10px; }
+      h2::after { content: ''; flex: 1; height: 1px; background: var(--line); }
+      p.summary { color: var(--dim); }
+      .edu { display: flex; justify-content: space-between; align-items: baseline; }
+      .edu h3 { font-size: 14px; }
+      .edu .meta { color: var(--dim); font-size: 12px; font-style: italic; }
+      .grid { display: grid; grid-template-columns: 1fr 1fr; gap: 4px 24px; }
+      .group { color: var(--dim); }
+      .group b { color: var(--ink); }
+      .project { margin-bottom: 10px; }
+      .project:last-child { margin-bottom: 0; }
+      .project h3 { font-size: 13px; display: flex; justify-content: space-between; align-items: baseline; }
+      .project .tag { color: var(--accent); font-size: 11px; font-weight: 600; letter-spacing: 0.5px; }
+      .project p { color: var(--dim); margin-top: 2px; }
+      .project .links a { color: var(--accent); text-decoration: none; font-size: 12px; margin-right: 12px; }
+      .timeline { list-style: none; }
+      .timeline li { padding-left: 16px; border-left: 2px solid var(--accent); margin-bottom: 10px; }
+      .timeline li:last-child { margin-bottom: 0; }
+      .timeline .when { color: var(--accent); font-size: 11px; font-weight: 600; letter-spacing: 1px; text-transform: uppercase; }
+      .timeline h3 { font-size: 13px; }
+      .timeline .where { color: var(--dim); font-size: 12px; }
+      .timeline p { color: var(--dim); }
+      .cert { display: flex; justify-content: space-between; align-items: baseline; }
+      .cert h3 { font-size: 13px; }
+      .cert .status { color: var(--accent); font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 1px; }
+      .hobbies { color: var(--dim); }
+      .toolbar { text-align: center; padding: 12px; }
+      .toolbar button {
+        font-family: 'Space Grotesk', sans-serif;
+        font-size: 13px; font-weight: 600;
+        background: var(--dark); color: #fff;
+        border: 0; border-radius: 6px;
+        padding: 10px 18px; cursor: pointer;
+      }
+      .toolbar button:hover { background: var(--accent); }
+      @media print {
+        body { background: #fff; font-size: 12px; }
+        .page { margin: 0; max-width: none; box-shadow: none; padding: 24px 30px; }
+        .toolbar { display: none; }
+        @page { margin: 14mm 12mm; }
+        a { color: inherit; }
+      }
+      @media (max-width: 600px) {
+        .page { padding: 24px 18px; margin: 12px; }
+        header { flex-direction: column; }
+        .contact { text-align: left; }
+        .grid { grid-template-columns: 1fr; }
+        section { margin-top: 16px; }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="toolbar">
+      <button onclick="window.print()">Save as PDF / Print</button>
+    </div>
+    <div class="page">
+      <header>
+        <div>
+          <h1>Michael Harvy<br /><span>M. Nepomuceno</span></h1>
+          <div class="role">Computer Programming Engineering Student</div>
+        </div>
+        <div class="contact">
+          <div>Morong, Rizal, Philippines</div>
+          <div><a href="mailto:michaelharvy66@gmail.com">michaelharvy66@gmail.com</a></div>
+          <div><a href="https://github.com/michaelharvy" target="_blank">github.com/michaelharvy</a></div>
+          <div><a href="https://www.linkedin.com/in/michael-harvy-m-nepomuceno-454678434/" target="_blank">linkedin.com/in/michael-harvy-m-nepomuceno</a></div>
+        </div>
+      </header>
+
+      <section>
+        <h2>Profile</h2>
+        <p class="summary">Computer Programming Engineering student who builds clean, functional web experiences. Hands-on with full-stack development, AI-powered applications, and hardware systems — currently leading the UI/UX of an AI cough-detection thesis (AURA-Dx). Fast learner, autonomous, and detail-oriented.</p>
+      </section>
+
+      <section>
+        <h2>Education</h2>
+        <div class="edu">
+          <div>
+            <h3>BS Computer Programming Engineering</h3>
+            <div style="color:var(--dim)">University of Rizal System &mdash; Morong Campus</div>
+          </div>
+          <div class="meta">Expected graduation: May&ndash;June 2027</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Technical Skills</h2>
+        <div class="grid">
+          <div class="group"><b>Frontend:</b> HTML5, CSS3, JavaScript, React.js, Vite</div>
+          <div class="group"><b>Backend &amp; DB:</b> Python, MySQL, SQLite, REST APIs, CRUD architecture</div>
+          <div class="group"><b>Tools &amp; Workflow:</b> Git / GitHub, Responsive Web Design</div>
+          <div class="group"><b>CompE &amp; Hardware:</b> C++ foundations, PC hardware assembly &amp; teardown, robotics / mapping, AI audio model integration</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Projects</h2>
+        <div class="project">
+          <h3>AURA-Dx <span class="tag">AI / ML &middot; Group Thesis &middot; 2025&ndash;Present</span></h3>
+          <p>AI-powered respiratory cough detection system that analyzes sound patterns to screen for TB, COPD, pneumonia, and healthy cases. Thesis lead for the public interface and real-time UI/UX.</p>
+          <div class="links"><a href="https://aura-dx.xyz" target="_blank">live site &rarr;</a></div>
+        </div>
+        <div class="project">
+          <h3>Personal Portfolio <span class="tag">React &middot; Vite &middot; React Router</span></h3>
+          <p>This site &mdash; a React + Vite rebuild of an original static HTML/CSS/JS portfolio, with client-side routing, lazy-loaded routes, light/dark theming, and scroll-triggered micro-interactions.</p>
+          <div class="links"><a href="https://github.com/michaelharvy/michael-harvy-portfolio" target="_blank">source &rarr;</a></div>
+        </div>
+        <div class="project">
+          <h3>Student Information System <span class="tag">Python &middot; MySQL</span></h3>
+          <p>A CRUD application for managing student records for a database course.</p>
+        </div>
+        <div class="project">
+          <h3>Simple Calculator <span class="tag">HTML &middot; CSS &middot; JavaScript</span></h3>
+          <p>A browser-based calculator built while learning the JavaScript basics.</p>
+        </div>
+      </section>
+
+      <section>
+        <h2>Experience</h2>
+        <ul class="timeline">
+          <li>
+            <div class="when">2026 &mdash; Present &middot; URS Morong</div>
+            <h3>BS Computer Engineering Student &amp; Thesis Lead</h3>
+            <p>Leading AURA-Dx UI/UX &mdash; building the real-time audio detection interface and integrating the AI model into a live, usable app.</p>
+          </li>
+          <li>
+            <div class="when">2025 &middot; Robotics, Computer Systems &amp; Full-Stack</div>
+            <h3>Hardware, Systems &amp; Web Development</h3>
+            <p>PC hardware teardown, autonomous mapping robot, and a full web portal with login/register, role management, and dashboards.</p>
+          </li>
+          <li>
+            <div class="when">2024 &middot; Custom Portfolio &amp; Web Development</div>
+            <h3>Web Foundations</h3>
+            <p>Built the first personal web portfolio that evolved into this site.</p>
+          </li>
+          <li>
+            <div class="when">2023 &middot; Core Logic &amp; Programming Fundamentals</div>
+            <h3>Foundations &amp; C++</h3>
+            <p>Mastered C++ basics and algorithm logic; final project was a CLI calculator.</p>
+          </li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Certifications</h2>
+        <div class="cert">
+          <div>
+            <h3>Cisco Networking Academy</h3>
+            <div style="color:var(--dim)">Trainee &mdash; certification track in progress</div>
+          </div>
+          <div class="status">In Progress</div>
+        </div>
+      </section>
+
+      <section>
+        <h2>Hobbies &amp; Interests</h2>
+        <p class="hobbies">Gaming strategy &amp; teamplay &middot; basketball &middot; AI-assisted prototyping &middot; always learning a new tool</p>
+      </section>
+    </div>
+  </body>
+</html>
